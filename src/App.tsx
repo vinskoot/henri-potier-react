@@ -1,5 +1,9 @@
-import React from "react";
+import React, { FunctionComponent } from 'react';
 
-export const App = () => {
-  return <div> Hello World! </div>;
+type AppProps = {
+    name: string;
+};
+
+export const App: FunctionComponent<AppProps> = ({ name }) => {
+    return <div> Hello World {name}! </div>;
 };
