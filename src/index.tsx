@@ -5,4 +5,4 @@ import './styles/main.scss';
 
 const rootElement = document.getElementById('react-app');
 
-render(<App name="Vincent" />, rootElement);
+render(<App />, rootElement);
