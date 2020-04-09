@@ -13,9 +13,9 @@
         "pree2e": "rimraf e2e/screenshots",
         "e2e": "testcafe",
         "pree2e:json": "rimraf e2e/reports && rimraf e2e/screenshots",
-        "e2e:json": "testcafe chrome --reporter cucumber-json:e2e/reports/report.json --reporter-app-name='My App' --reporter-app-version='x.y.z'",
+        "e2e:json": "testcafe chrome --reporter cucumber-json:e2e/reports/report.json --reporter-app-name='Henri Potier React' --reporter-app-version='x.y.z'",
         "e2e:live": "yarn e2e --live",
-        "e2e:report": "babel-node e2e/e2e-report-generator.js",
+        "e2e:report": "yarn e2e:json ; babel-node e2e/e2e-report-generator.js",
         "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix && stylelint '*/**/*.scss'"
     },
     "dependencies": {
