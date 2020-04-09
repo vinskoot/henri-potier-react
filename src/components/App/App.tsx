@@ -6,5 +6,5 @@ type AppProps = {
 };
 
 export const App: FunctionComponent<AppProps> = ({ name }) => {
-    return <div className={style.component}> Hello World {name}! </div>;
+    return <div className={`text ${style.component}`}> Hello World {name}! </div>;
 };

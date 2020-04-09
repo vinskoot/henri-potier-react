@@ -9,7 +9,7 @@ module.exports = {
         ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
         sourceType: 'module', // Allows for the use of imports
     },
-    ignorePatterns: ["node_modules/", "dist/"],
+    ignorePatterns: ["node_modules/", "dist/", "e2e/reports/"],
     rules: {
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",

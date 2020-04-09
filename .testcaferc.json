@@ -1,0 +1,10 @@
+{
+    "browsers": "chrome",
+    "src": "e2e/features/**/*.spec.js",
+    "appCommand": "yarn start",
+    "selectorTimeout": 10000,
+    "screenshots": {
+        "takeOnFails": true,
+        "path": "e2e/screenshots/"
+    }
+}
