@@ -19,6 +19,7 @@
         "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix && stylelint '*/**/*.scss'"
     },
     "dependencies": {
+        "axios": "^0.19.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.1.2"
@@ -41,6 +42,7 @@
         "eslint-config-prettier": "^6.10.1",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^3.0.0",
         "html-webpack-plugin": "^4.0.3",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^25.2.4",
