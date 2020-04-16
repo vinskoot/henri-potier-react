@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import style from './BooksList.scss';
 import { useBooks } from '../../hooks/useBooks';
 import { Book } from '../Book/Book';
 
@@ -13,7 +12,7 @@ export const BooksList: FunctionComponent<BooksListProps> = () => {
     }
 
     return (
-        <div className={`${style.component}`}>
+        <div>
             <ul>
                 {filteredBooks.map((book) => (
                     <li key={book.isbn}>

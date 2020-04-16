@@ -3,3 +3,4 @@ dist
 build
 e2e/reports/
 e2e/screenshots/
+.DS_Store

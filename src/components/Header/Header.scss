@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.component {
+    display: block;
+    padding: $padding;
+    color: $white;
+}
+
+.headerTitle {
+    flex: 1;
+    margin-bottom: 0;
+    color: $white;
+
+    &:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+.widgets {
+    display: flex;
+    align-items: center;
+}
+
+@include tablet {
+    .component {
+        display: flex;
+        align-items: center;
+    }
+}

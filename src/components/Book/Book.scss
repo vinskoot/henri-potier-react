@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
 .component {
-    padding: $padding;
+    display: flex;
+    align-items: center;
+    padding: $padding-items;
+}
+
+.actions {
+    padding-left: $padding-items;
 }

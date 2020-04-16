@@ -1,3 +1,12 @@
-$color-bg: white;
-$color-text: black;
+@import '~bulma/sass/utilities/functions';
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/derived-variables';
+@import '~bulma/sass/utilities/mixins';
+
+// CUSTOM
 $padding: 20px;
+$padding-items: 10px;
+
+// BULMA
+$section-padding: 3rem $padding;
+$footer-padding: $padding;

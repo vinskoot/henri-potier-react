@@ -11,10 +11,16 @@ export const Book: FunctionComponent<BookProps> = ({ book }) => {
     const { addToCart, removeFromCart } = useCart();
 
     return (
-        <div className={`${style.component}`}>
+        <div className={`${style.component} container`}>
             {book.title}
-            <button onClick={(): void => removeFromCart(book.isbn, 1)}>-</button>
-            <button onClick={(): void => addToCart(book.isbn, 1)}>+</button>
+            <div className={style.actions}>
+                <button className="button is-small" onClick={(): void => removeFromCart(book.isbn, 1)}>
+                    -
+                </button>
+                <button className="button is-small" onClick={(): void => addToCart(book.isbn, 1)}>
+                    +
+                </button>
+            </div>
         </div>
     );
 };

@@ -3,4 +3,7 @@
 .component {
     display: flex;
     align-items: center;
+    padding-left: 5px;
+    min-height: 40px;
+    white-space: nowrap;
 }

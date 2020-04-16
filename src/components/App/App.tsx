@@ -6,7 +6,8 @@ import { NoRoute } from '../../pages/NoRoute/NoRoute';
 import { Cart } from '../../pages/Cart/Cart';
 import { BooksContext, booksContextDefault, Book } from '../../contexts/BooksContext';
 import { CartContext, cartContextDefault, CartItem } from '../../contexts/CartContext';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { Header } from '../Header/Header';
+import { Footer } from '../Footer/Footer';
 
 type AppProps = {};
 
@@ -18,7 +19,7 @@ export const App: FunctionComponent<AppProps> = () => {
     const [cart, setCart] = useState<CartItem[]>([]);
 
     return (
-        <div className={style.component}>
+        <div className={`${style.component} container`}>
             <BooksContext.Provider
                 value={{
                     ...booksContextDefault,
@@ -33,24 +34,23 @@ export const App: FunctionComponent<AppProps> = () => {
                 }}
             >
                 <CartContext.Provider value={{ ...cartContextDefault, cart, setCart }}>
-                    <header className={style.header}>
-                        <h1 className={style.headerTitle}>Henri Potier</h1>
-                        <CartWidget />
-                    </header>
                     <Router>
-                        <Switch>
-                            <Route path="/cart">
-                                <Cart />
-                            </Route>
-                            <Route path="/">
-                                <Home />
-                            </Route>
-                            <Route path="*">
-                                <NoRoute />
-                            </Route>
-                        </Switch>
+                        <Header />
+                        <section className="section page">
+                            <Switch>
+                                <Route path="/cart">
+                                    <Cart />
+                                </Route>
+                                <Route path="/">
+                                    <Home />
+                                </Route>
+                                <Route path="*">
+                                    <NoRoute />
+                                </Route>
+                            </Switch>
+                        </section>
+                        <Footer />
                     </Router>
-                    <footer>© {new Date().getFullYear()} Vincent COUTY</footer>
                 </CartContext.Provider>
             </BooksContext.Provider>
         </div>

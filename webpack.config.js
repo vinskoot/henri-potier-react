@@ -22,7 +22,22 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                include: path.resolve(__dirname, 'src/styles'),
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                        },
+                    },
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.scss$/,
                 include: path.resolve(__dirname, 'src'),
+                exclude: path.resolve(__dirname, 'src/styles'),
                 use: [
                     MiniCssExtractPlugin.loader,
                     {

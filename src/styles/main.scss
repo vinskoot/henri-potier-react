@@ -1,8 +1,18 @@
 @import './variables';
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+@import 'bulma/sass/layout/_all.sass';
+@import 'bulma/sass/form/_all.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/icon.sass';
+@import 'bulma/sass/elements/title.sass';
+@import 'bulma-badge/dist/css/bulma-badge.sass';
 
 body {
     margin: 0;
-    background-color: $color-bg;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $color-text;
+}
+
+a {
+    color: inherit;
 }
