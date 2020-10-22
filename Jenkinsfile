@@ -13,4 +13,10 @@ pipeline {
       }
     }
   }
+  
+  post {
+    always {
+      archiveArtifacts artifacts: 'ip.txt', followSymlinks: false
+    }
+  }
 }
